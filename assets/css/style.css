@@ -42,5 +42,41 @@ body{
 .search_bar button img{
 width: 20;
 height: 45px;
+}
 
+.weather-icon{
+    width: 120px;
+    margin-top: 40px;
+}
+
+.weather h1{
+    font-size: 75px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.humiwind{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.humiwind img{
+    width: 100px;
 }
