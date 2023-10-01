@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+  
     <title>Weather Dashboard</title>
 </head>
 <body>
     <div class="container">
         <div class="search_bar">          
-            <input type="text" placeholder="City name">
-            <button><img src="/assets/images/search button.gif" alt="assets/images/alt search button.png"> </button>
+            <input type="text" id="cityInput" placeholder="City Name">
+            <button><img src="/assets/images/search button.gif" id="searchBtn"></button>
         </div> 
         <div class="weather">
             <img src="/assets/images/snow.png" class="weather-icon">
-            <h1 class="tempretaure">91°f</h1>
+            <h1 class="tempretaure">91°F</h1>
             <h2 class="city">San Antonio</h2>
+            <h2 class="description">windy</h2>
                 <div class="bottom">
                     <div class="humiwind">
                         <img src="/assets/images/humidity.png">
@@ -31,24 +33,48 @@
                             <p>Wind Speed</p>
                         </div>    
                     </div>
-
                 </div>        
-
-        </div>
-
         
+             <!-- <div id="5DayForcast">
+                <div id="weatherContainer"> -->
+                    <div class="days">
+                        <p class="weather" id="day1"></p>
+                        <div class="image"><img src="/assets/images/hot.png" class="imgClass"></div>
+                        <p class="minValue" id="day1Min">Min</p>
+                        <p class="maxValue" id="day1Max">Max</p>
+                    </div>
 
+                    <div class="days">
+                        <p class="weather" id="day2"></p>
+                        <div class="image"><img src="/assets/images/hot.png" class="imgClass"></div>
+                        <p class="minValue" id="day2Min">Min</p>
+                        <p class="maxValue" id="day2Max">Max</p>
+                    </div>
 
+                    <div class="days">
+                        <p class="weather" id="day3"></p>
+                        <div class="image"><img src="/assets/images/hot.png" class="imgClass"></div>
+                        <p class="minValue" id="day3Min">Min</p>
+                        <p class="maxValue" id="day3Max">Max</p>
+                    </div>
 
+                    <div class="days">
+                        <p class="weather" id="day4"></p>
+                        <div class="image"><img src="/assets/images/hot.png" class="imgClass"></div>
+                        <p class="minValue" id="day4Min">Min</p>
+                        <p class="maxValue" id="day4Max">Max</p>
+                    </div>
 
-
-
+                    <div class="days">
+                        <p class="weather" id="day5"></p>
+                        <div class="image"><img src="/assets/images/hot.png" class="imgClass"></div>
+                        <p class="minValue" id="day5Min">Min </p>
+                        <p class="maxValue" id="day5Max">Max</p>
+                    </div>
+        </div>
     </div>
-
-
-
-
-
+        
+    
 
     <script src="./script.js"></script>
 </body>
