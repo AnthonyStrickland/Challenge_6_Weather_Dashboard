@@ -1,3 +1,5 @@
+// var city = localStorage.getItem("city")
+
 var weather = {
     apiKey:"f8e7222d3f62239de2cbfc102913bc69",
     fetchWeather: function (city) {
@@ -20,6 +22,7 @@ var weather = {
         document.querySelector(".description").innerText = description;
         document.querySelector(".humidity").innerText = humidity + "%";
         document.querySelector(".wind").innerText = speed + " mph";
+        // localStorage.setItem("city", city);
         }
         )},
 
@@ -34,11 +37,10 @@ myButton.addEventListener("click",function(){
     weathers.search();
 });
 
-
 var weathers = {
-    apiKey:"5e149257cda96dbb1e8ed6d2df99ad7e",
+       apiKey:"5e149257cda96dbb1e8ed6d2df99ad7e",
     fetchWeather: function (city) {
-        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" 
+        fetch("https://api.openweathermap.org/data/2.5/forecast/?q=" 
         + city 
         + "&units=imperial&appid=" 
         + this.apiKey)
@@ -46,12 +48,26 @@ var weathers = {
         .then(data =>{   
             console.log(data);
 
-                for(i=0;i<5;i++){
-        document.getElementById("day" + (i+1) +"Min").innerHTML = "Min;" + Number(data.list[i].main.temp_min).toFixed(0)+"°F";
-    }
-    for(i=0;i<5;i++){
-        document.getElementById("day" + (i+1) +"Max").innerHTML = "Max;" + Number(data.list[i].main.temp_max).toFixed(0)+"°F";     
-    }   
+            document.querySelector(".imgClass1").src = "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon+ '.png';
+            document.getElementById("day1Min" ).innerHTML = 'Temp: ' + Number(data.list[0].main.temp).toFixed(0) + "°F";
+            document.getElementById("day1Max" ).innerHTML = 'Humidity: ' + Number(data.list[0].main.humidity) + "%";
+
+            document.querySelector(".imgClass2").src = "https://openweathermap.org/img/wn/" + data.list[8].weather[0].icon+ '.png';
+            document.getElementById("day2Min" ).innerHTML = 'Temp: ' + Number(data.list[8].main.temp).toFixed(0) + "°F";
+            document.getElementById("day2Max" ).innerHTML = 'Humidity: ' + Number(data.list[8].main.humidity) + "%";
+
+            document.querySelector(".imgClass3").src = "https://openweathermap.org/img/wn/" + data.list[16].weather[0].icon+ '.png';
+            document.getElementById("day3Min" ).innerHTML = 'Temp: ' + Number(data.list[16].main.temp).toFixed(0) + "°F";
+            document.getElementById("day3Max" ).innerHTML = 'Humidity: ' + Number(data.list[16].main.humidity) + "%";
+
+            document.querySelector(".imgClass4").src = "https://openweathermap.org/img/wn/" + data.list[24].weather[0].icon+ '.png';
+            document.getElementById("day4Min" ).innerHTML = 'Temp: ' + Number(data.list[24].main.temp).toFixed(0) + "°F";
+            document.getElementById("day4Max" ).innerHTML = 'Humidity: ' + Number(data.list[24].main.humidity) + "%";
+
+            document.querySelector(".imgClass5").src = "https://openweathermap.org/img/wn/" + data.list[32].weather[0].icon+ '.png';
+            document.getElementById("day5Min" ).innerHTML = 'Temp: ' + Number(data.list[32].main.temp).toFixed(0) + "°F";
+            document.getElementById("day5Max" ).innerHTML = 'Humidity: ' + Number(data.list[32].main.humidity) + "%";
+
 })      
         },
 
@@ -59,4 +75,5 @@ var weathers = {
             this.fetchWeather(document.querySelector("#cityInput").value);
         }
     }
+
 
