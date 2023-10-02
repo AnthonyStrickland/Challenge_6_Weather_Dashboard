@@ -8,14 +8,14 @@ a five day forcast for that city.  when a city is chosen the weather icons chang
 
 ## Installation
 
-click the link to open app: https://anthonystrickland.github.io/module-challenge-01/
+click the link to open app: https://anthonystrickland.github.io/Challenge_6_Weather_Dashboard/
 
 ## Usage
 default page of the weather dashboard
-![Alt text](image.png)
+![Alt text](assets/images/image.png)
 
 live page of the weather dashboard
-![Alt text](image-1.png)
+![Alt text](assets/images/image-1.png)
 
 ## Credits
 
